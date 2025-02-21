@@ -1,6 +1,7 @@
 import os
 import cv2
 
+
 def verificar_estrutura_pastas():
     """Verifica se os diretórios necessários existem e os cria se necessário."""
     pastas = ["dataset", "models"]
@@ -8,6 +9,7 @@ def verificar_estrutura_pastas():
         if not os.path.exists(pasta):
             os.makedirs(pasta)
             print(f"Criado diretório: {pasta}")
+
 
 def exibir_imagem(image_path):
     """Exibe uma imagem na tela."""

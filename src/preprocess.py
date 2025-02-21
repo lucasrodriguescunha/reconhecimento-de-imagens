@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 import os
 
+
 def carregar_e_preparar_imagem(image_path):
     img = cv2.imread(image_path)
     if img is None:
@@ -10,6 +11,7 @@ def carregar_e_preparar_imagem(image_path):
     img = cv2.resize(img, (224, 224))
     img = img / 255.0
     return np.expand_dims(img, axis=0)
+
 
 def processar_dataset(dataset_path):
     imagens = []
@@ -28,6 +30,7 @@ def processar_dataset(dataset_path):
                     continue
 
     return np.array(imagens), np.array(labels)
+
 
 if __name__ == "__main__":
     dataset_path = "dataset/"
